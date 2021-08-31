@@ -77,3 +77,9 @@ async def replay_media(bot, message):
             message_id=message.message_id,
             parse_mode="html"
         )
+
+
+@register(outgoing=True, pattern='^/start(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("ᴀsᴜᴘᴀɴ ʙᴇʀɢɪᴢɪ = [ᴛᴇᴋᴀɴ ᴅɪsɪɴɪ](https://t.me/joinchat/HqzBMqat6SszOGQ1)")
